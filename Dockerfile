@@ -7,7 +7,7 @@ COPY pom.xml .
 
 COPY src ./src
 
-RUN mvn clean package -DskipTests
+RUN mvn -s settings.xml clean package -DskipTests
 
 FROM eclipse-temurin:21-jre
 
