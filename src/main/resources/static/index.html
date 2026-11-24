@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flight Radar | Live Air Traffic</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <span>✈</span> FLIGHT RADAR
+    </div>
+
+    <div class="search-box">
+        <input type="text"
+               id="searchInput"
+               placeholder="Search callsign or ICAO24...">
+    </div>
+
+    <div class="live-status">
+        <span class="live-dot"></span>
+        LIVE
+    </div>
+
+</header>
+
+<main>
+
+    <aside id="sidebar">
+
+        <h3>LIVE AIRCRAFT</h3>
+
+        <div class="flight-count">
+            <span id="flightCount">0</span>
+            <small>Aircraft tracked</small>
+        </div>
+
+        <div id="flightList">
+            <p>Loading aircraft...</p>
+        </div>
+
+    </aside>
+
+    <section id="radar">
+
+        <div id="map"></div>
+
+        <div id="flightPanel" class="flight-panel">
+            <p>Select an aircraft on the map</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/js/radar.js"></script>
+
+</body>
+</html>
